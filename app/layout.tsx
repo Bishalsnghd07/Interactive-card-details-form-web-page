@@ -24,7 +24,7 @@ export default function RootLayout({
       <head>
       <link 
        rel="icon" 
-       href="/assets/images/favicon-32x32.png"
+       href="/images/favicon-32x32.png"
        type="image/png" 
        sizes="32x32" 
        />

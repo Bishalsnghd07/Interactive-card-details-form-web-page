@@ -1,4 +1,5 @@
 'use client';
+
 import { useState } from "react";
 import Ripples from "react-ripples";
 
@@ -161,7 +162,7 @@ export default function Home() {
 
            {/* Front card */}
           <div className="flex relative justify-between mr-[3.6rem] mt-[6.12rem] xl:mt-0 xl:mr-0 z-20">
-            <img src="/images/bg-card-front.png" alt={""} className="w-[17rem] h-[10.5rem] xl:w-auto xl:h-auto bg-contain bg-center"/>
+            <img src="/images/bg-card-front.avif" alt={""} className="w-[17rem] h-[10.5rem] xl:w-auto xl:h-auto bg-contain bg-center"/>
             <img src="/images/card-logo.svg" alt="" className="absolute top-5 left-5 xl:top-8 xl:left-8 xl:w-auto xl:h-auto w-[25%] h-[24%]" />
             <h1 className="text-white text-lg xl:text-3xl font-medium tracking-wider xl:tracking-widest absolute xl:bottom-[4.2rem] xl:left-8 bottom-[3rem] left-6">{cardNumber ? cardNumber: '0000 0000 0000 0000'}</h1>
             <p className="absolute text-white bottom-4 left-6 xl:bottom-6 xl:left-8 font-medium capitalize text-sm xl:text-base">{cardholderName ? cardholderName: 'JANE APPLESSED'}</p>
@@ -170,7 +171,7 @@ export default function Home() {
 
           {/* Back card */}
           <div className="absolute top-2 right-0 sm:right-[5rem] md:right-[14rem] lg:right-[20rem] text-center xl:relative xl:flex xl:pl-24 xl:left-0"> 
-          <img src="/images/bg-card-back.png" alt={""} className="w-[18rem] h-[10rem] xl:w-auto xl:h-auto"/>
+          <img src="/images/bg-card-back.webp" alt={""} width={100} height={100} className="w-[18rem] h-[10rem] xl:w-auto xl:h-auto"/>
           <div className="absolute top-[4.2rem] right-[2rem] xl:right-[3.6rem] xl:top-[6.66rem] text-white text-base text-center xl:text-xl tracking-wider font-semibold">{cvc ? cvc: '000'}</div>
           </div>
         </div>
@@ -214,13 +215,14 @@ focus:outline-none w-full px-6 p-3`}
       {/* <div className="relative p-4"> */}
 
     <input 
-      type="number" 
+      type="text" 
       id="mm" 
       className={`bg-gray-50 border border-gray-200 text-base rounded-lg text-gray-900 
 focus:outline-none w-full px-4 xl:px-6 p-3`} 
       placeholder="MM"  
       value={mm}
       onChange={handleMmChange}
+      maxLength={2}
       />
        <input 
       type="text" 
@@ -230,6 +232,7 @@ focus:outline-none w-full px-4 xl:px-6 p-3`}
       placeholder="YY"  
       value={yy}
       onChange={handleYyChange}
+      maxLength={2}
       />
       {/* </div> */}
     </div>
@@ -276,7 +279,7 @@ focus:outline-none w-full px-6 p-3`}
             <img src="/images/icon-complete.svg" alt=""  className="pb-4"/>
           <h1 className="text-2xl font-semibold text-black tracking-widest text-center">THANK YOU!</h1>
           <p className="text-base font-medium text-center">We have added your card details</p>
-           <button type="button" onClick={thanksForm} className={`w-full max-w-[22rem] sm:w-[22rem] xl:w-[21rem] my-6 text-white bg-slate-900 py-2.5 rounded-lg px-2 text-center`}>Continue</button>
+           <button type="button" onClick={thanksForm} className={`w-full max-w-[22rem] sm:w-[22rem] xl:w-[21rem] my-6 text-white bg-slate-900 py-2.5 rounded-lg px-2 text-center transition duration-500 shadow-md hover:bg-gradient-to-r from-slate-900 to-slate-600 ease-linear`}>Continue</button>
            </div>
           </div>
         )}
